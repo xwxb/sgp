@@ -1,8 +1,6 @@
 package sgp
 
 import (
-	"fmt"
-	"runtime"
 	"sync"
 )
 
@@ -38,7 +36,6 @@ func (p *Pool) Run() {
 			defer p.wg.Done()
 			for task := range p.taskChan {
 				task.f()
-				fmt.Println("goroutine num: ", runtime.NumGoroutine())
 			}
 		}()
 	}

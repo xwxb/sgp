@@ -22,6 +22,7 @@ func BenchmarkPool(b *testing.B) {
 
 	myPrint := func() {
 		fmt.Println("doing task")
+		fmt.Println("goroutine num: ", runtime.NumGoroutine())
 	}
 	task := NewTask(myPrint)
 	for i := 0; i < taskCount; i++ {
