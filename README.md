@@ -4,7 +4,7 @@
 
 ### Usage
 
-see `srp_test.go`
+see `sgp_test.go`
 
 ```go
 
